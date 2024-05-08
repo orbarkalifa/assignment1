@@ -4,6 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -11,8 +12,8 @@ body {
 }
 
 .container {
-    max-width: 300px;
-    width: 100%;
+    max-width: 600px;
+    width: auto;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -38,12 +39,14 @@ label {
 }
 
 input {
-    width: 100%;
+    width: 70%;
     padding: 8px;
     margin-top: 5px;
     box-sizing: border-box;
 }
-
+.names input {
+    width: auto;
+}
 input:hover {
     border-color: orange;
 }
@@ -64,10 +67,12 @@ input:hover {
 /* Responsive styles */
 @media screen and (max-width: 600px) {
     .container {
+        max-width: auto;
         padding: 10px;
     }
 
     .names {
         flex-direction: column;
+        display: contents;
     }
 }
