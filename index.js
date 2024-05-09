@@ -29,6 +29,7 @@ var validate = () => {
     // Validating phone number
     if (!validatePhoneNumber()) phoneNumber.style.borderColor = 'red';
     else phoneNumber.style.borderColor = '';
+    validatePass();
 };
 
 // Function to validate password
@@ -45,6 +46,7 @@ function validatePass() {
         pass.style.borderColor = '';
         confirm_pass.style.borderColor = '';
         document.getElementById('message').innerHTML = '';
+
         return true;
     }
 };
@@ -58,13 +60,13 @@ function validateEmail() {
 
 // Function to validate first name format
 function validateFName() {
-    const nameRegex = /^[a-zA-Z]*$/;
+    const nameRegex = /^[a-zA-Z\s]*$/;
     return nameRegex.test(fname.value);
 }
 
 // Function to validate last name format
 function validateLName() {
-    const nameRegex = /^[a-zA-Z]*$/;
+    const nameRegex = /^[a-zA-Z\s]*$/;
     return nameRegex.test(lname.value);
 }
 
